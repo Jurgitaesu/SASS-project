@@ -1,0 +1,37 @@
+@import "colors"
+
+@mixin progress-bar
+  background-color: $light-blue
+  border-radius: 13px
+  padding: 3px
+  > div
+    height: 20px
+    border-radius: 10px
+    background-color: $dark-blue
+
+.progress-bar-one
+  @include progress-bar
+
+  > div
+    width: 90%
+
+.progress-bar-two
+  @include progress-bar
+
+  > div
+    width: 80%
+    color: $white
+    text-align: center
+
+.progress-bar-three
+  @include progress-bar
+
+  > div
+    width: 70%
+
+.progress-bar-three-title
+  font-size: 16px
+  color: $white
+  text-shadow: -1px -1px 0 $dark-blue, 1px -1px 0 $dark-blue, -1px 1px 0 $dark-blue, 1px 1px 0 $dark-blue
+  padding-left: 10px
+  padding-bottom: 5px

@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/084c66dcbf.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>CSS library</title>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1 class="text-center pt-80">CSS library</h1>
+    </div>
+    <div class="d-flex">
+        <div class="navigation">
+            <div class="navigation-item pd-10 mg-0"><a href="#alerts"
+                                                       class="decoration-none">Alerts</a>
+            </div>
+            <div class="navigation-item pd-10 mg-0"><a href="#buttons"
+                                                       class="decoration-none">Buttons</a>
+            </div>
+            <div class="navigation-item pd-10 mg-0"><a href="#cards"
+                                                       class="decoration-none">Card</a></div>
+            <div class="navigation-item pd-10 mg-0"><a href="#loaders"
+                                                       class="decoration-none">Loaders</a></div>
+            <div class="navigation-item pd-10 mg-0"><a href="#pagination"
+                                                       class="decoration-none">Pagination</a></div>
+            <div class="navigation-item pd-10 mg-0"><a href="#progressBars"
+                                                       class="decoration-none">Progress bars</a></div>
+            <div class="navigation-item pd-10 mg-0"><a href="#centering"
+                                                       class="decoration-none">Centering</a></div>
+            <div class="navigation-item pd-10 mg-0"><a href="#paddings"
+                                                       class="decoration-none">Paddings</a>
+            </div>
+            <div class="navigation-item pd-10 mg-0"><a href="#margins"
+                                                       class="decoration-none">Margins</a>
+            </div>
+        </div>
+        <div class="documentation">
+            <div class="box" id="alerts">
+                <h2 class="pd-10 text-center">Alerts</h2>
+                <div class="my-60">
+                    <div class="alert-one">
+                        <span class="close-btn"><i class="fas fa-times"></i></span>
+                        <strong>Success!</strong> Alert message
+                    </div>
+                    <div class="alert-two">
+                        <span class="close-btn"><i class="fas fa-times"></i></span>
+                        <strong>Warning!</strong> Alert message
+                    </div>
+                    <div class="alert-three">
+                        <span class="close-btn"><i class="fas fa-times"></i></span>
+                        <strong>Danger!</strong> Alert message
+                    </div>
+                    <div class="alert-four">
+                        <span class="close-btn"><i class="fas fa-times"></i></span>
+                        <strong>Info!</strong> Alert message
+                    </div>
+                    <div class="alert-five">
+                        <span class="close-btn"><i class="fas fa-times"></i></span>
+                        <strong>Woohoo!</strong> Alert message
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;div class="alert-one"&gt;
+    &lt;span class="close-btn"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Alert message
+&lt;/div&gt;
+
+&lt;div class="alert-two"&gt;
+    &lt;span class="close-btn"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; Alert message
+&lt;/div&gt;
+
+&lt;div class="alert-three"&gt;
+    &lt;span class="close-btn"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;strong&gt;Danger!&lt;/strong&gt; Alert message
+&lt;/div&gt;
+
+&lt;div class="alert-four"&gt;
+    &lt;span class="close-btn"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;strong&gt;Info!&lt;/strong&gt; Alert message
+&lt;/div&gt;
+
+&lt;div class="alert-five"&gt;
+    &lt;span class="close-btn"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;strong&gt;Woohoo!&lt;/strong&gt; Alert message
+&lt;/div&gt;
+
+                </pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+@mixin alert
+     padding: 20px
+     margin-top: 20px
+     margin-bottom: 20px
+     color: white
+     border-radius: 5px
+
+.close-btn
+     margin-left: 15px
+     color: $white
+     font-weight: bold
+     float: right
+     font-size: 22px
+     line-height: 20px
+     cursor: pointer
+     transition: 0.3s
+
+.close-btn:hover
+    color: $dark-grey
+
+.alert-one
+    @include alert
+    background-color: $green
+
+.alert-two
+     @include alert
+     background-color: $yellow
+
+.alert-three
+     @include alert
+     background-color: $red
+
+.alert-four
+     @include alert
+     background-color: $lightest-blue
+
+.alert-five
+     @include alert
+     background-color: $violet
+
+            </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="buttons">
+                <h2 class="pd-20 text-center">Buttons</h2>
+                <div class="d-flex space-between my-60">
+                    <div class="button-one">Button 1</div>
+                    <div class="button-two">Button 2</div>
+                    <div class="button-three">Button 3</div>
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;div class="button-one"&gt;Button 1&lt;/div&gt;
+
+&lt;div class="button-two"&gt;Button 2&lt;/div&gt;
+
+&lt;div class="button-three"&gt;Button 3&lt;/div&gt;
+
+&lt;div class="button-four"&gt;Button 4&lt;/div&gt;
+
+&lt;div class="button-five"&gt;Button 5&lt;/div&gt;
+
+</pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+@mixin button
+    background-color: $light-blue
+    color: $dark-brown
+    transition: all 0.3s
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+     box-shadow: 0 6px 0 $dark-blue
+    -webkit-box-shadow: 0 6px 0 $dark-blue
+    -moz-box-shadow: 0 6px 0 $dark-blue
+    border: solid 1px $dark-blue
+    cursor: pointer
+    &:hover
+        background-color: $blue
+        color: $white
+
+.button-one
+    @include button
+    border-radius: 5px
+    padding: 19px 32px
+
+.button-two
+    @include button
+    padding: 20px
+     border-radius: 30px
+
+.button-three
+    @include button
+     padding: 19px 32px
+
+                    </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="cards">
+                <h2 class="pd-10 text-center">Cards</h2>
+                <div class="d-flex space-between my-60">
+                    <div class="card-one">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDV8fHByb2ZpbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                             alt="profile">
+                        <div>
+                            <h3>Jane Brown</h3>
+                            <p>Engineer</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+                                eligendi et facere impedit inventore minima nostrum officia omnis sequi veniam.</p>
+                        </div>
+                    </div>
+                    <div class="card-two">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDV8fHByb2ZpbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                             alt="profile">
+                        <div>
+                            <h3>Jane Brown</h3>
+                            <p>Engineer</p>
+                            <div class="card-two-footer">
+                                <div class="card-two-footer-border">
+                                    <h4>Posts</h4>
+                                    <div>125</div>
+                                </div>
+                                <div class="card-two-footer-border">
+                                    <h4>Comments</h4>
+                                    <div>432</div>
+                                </div>
+                                <div>
+                                    <h4>Friends</h4>
+                                    <div>850</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-three">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDV8fHByb2ZpbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                             alt="profile">
+                        <div>
+                            <h3>Jane Brown</h3>
+                            <p>Engineer</p>
+                            <div class="card-three-center">
+                                <div class="card-three-button">Read more...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;div class="card-one"&gt;
+     &lt;img src="your.jpg" alt="profile"&gt;
+     &lt;div&gt;
+           &lt;h3&gt;Jane Brown&lt;/h3&gt;
+           &lt;p&gt;Engineer&lt;/p&gt;
+           &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+           Accusamus eligendi et facere impedit inventore minima nostrum
+           officia omnis sequi veniam.&lt;/p&gt;
+           &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="card-two"&gt;
+     &lt;img src="your.jpg" alt="profile"&gt;
+     &lt;div&gt;
+           &lt;h3&gt;Jane Brown&lt;/h3&gt;
+           &lt;p>Engineer&lt;/p&gt;
+           &lt;div class="card-two-footer"&gt;
+                &lt;div class="card-two-footer-border"&gt;
+                     &lt;h4&gt;Posts&lt;/h4&gt;
+                     &lt;div>125&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="card-two-footer-border"&gt;
+                     &lt;h4&gt;Comments&lt;/h4&gt;
+                     &lt;div>432&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                     &lt;h4&gt;Friends&lt;/h4&gt;
+                     &lt;div&gt;850&lt;/div&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="card-three"&gt;
+     &lt;img src="your.jpg" alt="profile"&gt;
+     &lt;div&gt;
+            &lt;h3&gt;Jane Brown&lt;/h3&gt;
+            &lt;p&gt;Engineer&lt;/p&gt;
+            &lt;div class="card-three-center"&gt;
+            &lt;div class="card-three-button">Read more...&lt;/div&gt;
+            &lt;/div&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+                    </pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+@mixin card
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  transition: 0.3s
+  width: 30%
+  border-radius: 5px
+  > div
+    padding: 20px 16px
+
+    p:nth-child(2)
+      text-align: center
+      padding-bottom: 20px
+  h3
+    text-align: center
+    padding-bottom: 5px
+    font-weight: bold
+  img
+    border-radius: 5px
+    width: 100%
+  &:hover
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2)
+
+
+.card-one
+  @include card
+
+  > div
+    p:nth-child(3)
+      text-align: justify
+
+.card-two
+  @include card
+  position: relative
+
+  .card-two-footer
+    display: flex
+    margin-left: -16px
+    padding: 0
+    text-align: center
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    background-color: $brown
+    position: absolute
+    bottom: 0
+    width: 100%
+
+    > div
+      flex-grow: 1
+      padding-top: 20px
+      padding-bottom: 20px
+
+    h4
+      padding-bottom: 5px
+
+.card-two-footer-border
+  border-right: 1px solid $dark-grey
+
+.card-three
+  @include card
+  position: relative
+
+.card-three-center
+  display: flex
+  justify-content: center
+
+.card-three-button
+  background-color: $light-blue
+  color: $dark-brown
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  position: absolute
+  bottom: 30px
+  padding: 10px
+  border-radius: 5px
+  transition: all 0.3s
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  cursor: pointer
+
+  &:hover
+    background-color: $blue
+    color: $white
+
+            </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="loaders">
+                <h2 class="pd-10 text-center">Loaders</h2>
+                <div class="d-flex space-between my-60">
+                    <div class="loader-one">
+                        <div class="loader-one-core"></div>
+                    </div>
+                    <div class="loader-two">
+                        <div class="loader-two-bubble-one"></div>
+                        <div class="loader-two-bubble-two"></div>
+                        <div class="loader-two-bubble-three"></div>
+                    </div>
+                    <div class="loader-three mt-20"></div>
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;div class="loader-one"&gt;
+     &lt;div class="circle-core"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="loader-two"&gt;
+     &lt;div class="loader-two-bubble-one"&gt;&lt;/div&gt;
+     &lt;div class="loader-two-bubble-two"&gt;&lt;/div&gt;
+     &lt;div class="loader-two-bubble-three"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="loader-three"&gt;&lt;/div&gt;
+
+                </pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+.loader-one
+    width: 50px
+    height: 50px
+    padding: 3px
+    border-radius: 50%
+    background: linear-gradient(0deg, rgba(241, 221, 1, 0.1) 33%,
+    rgba(241, 221, 1, 1) 100%)
+    animation: spin .8s linear 0s infinite
+
+.loader-one-core
+    width: 100%
+    height: 100%
+    background-color: $light-grey
+    border-radius: 50%
+
+@keyframes spin
+    from
+        transform: rotate(0)
+    to
+        transform: rotate(359deg)
+
+.loader-two
+    width: 120px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin bubble
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background-color: $yellow
+
+.loader-two-bubble-one
+    @include bubble
+    animation: pulse .4s ease 0s infinite alternate
+
+.loader-two-bubble-two
+    @include bubble
+    animation: pulse .4s ease .2s infinite alternate
+
+.loader-two-bubble-three
+    @include bubble
+    animation: pulse .4s ease .4s infinite alternate
+
+@keyframes pulse
+    from
+        opacity: 1
+        transform: scale(1)
+    to
+        opacity: .25
+        transform: scale(.75)
+
+.loader-three
+    @include bubble
+    animation: pulse .4s ease 0s infinite alternate
+
+            </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="pagination">
+                <h2 class="pd-20 text-center">Pagination</h2>
+                <div class="d-flex space-between my-60">
+                    <div class="pagination-one">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </div>
+                    <div class="pagination-two">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </div>
+                    <div class="pagination-three">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;div class="pagination-one"&gt;
+        &lt;a href="#"&gt;1&lt;/a&gt;
+        &lt;a href="#"&gt;2&lt;/a&gt;
+        &lt;a href="#"&gt;3&lt;/a&gt;
+        &lt;a href="#"&gt;4&lt;/a&gt;
+        &lt;a href="#"&gt;5&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination-two"&gt;
+        &lt;a href="#"&gt;1&lt;/a&gt;
+        &lt;a href="#"&gt;2&lt;/a&gt;
+        &lt;a href="#"&gt;3&lt;/a&gt;
+        &lt;a href="#"&gt;4&lt;/a&gt;
+        &lt;a href="#"&gt;5&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination-three"&gt;
+        &lt;a href="#"&gt;1&lt;/a&gt;
+        &lt;a href="#"&gt;2&lt;/a&gt;
+        &lt;a href="#"&gt;3&lt;/a&gt;
+        &lt;a href="#"&gt;4&lt;/a&gt;
+        &lt;a href="#"&gt;5&lt;/a&gt;
+&lt;/div&gt;
+
+</pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+@mixin pagination
+     float: left
+     padding: 8px 16px
+     text-decoration: none
+     border: 1px solid $dark-grey
+     color: $black
+     background-color: $light-blue
+     &:hover
+        background-color: $blue
+        color: $white
+
+.pagination-one a
+     @include pagination
+     border-radius: 50%
+
+.pagination-two a
+     @include pagination
+     border-radius: 20%
+
+.pagination-three a
+     @include pagination
+
+                    </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="progressBars">
+                <h2 class="pd-20 text-center">Progress bars</h2>
+                <div class="my-60">
+                    <div class="progress-bar-one mg-20">
+                        <div></div>
+                    </div>
+                    <div class="progress-bar-two mg-20">
+                        <div class="font-20">80%</div>
+                    </div>
+                    <div class="mg-20">
+                        <p class="progress-bar-three-title">Increased by 70%:</p>
+                        <div class="progress-bar-three">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;div class="progress-bar-one"&gt;
+        &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress-bar-two"&gt;
+        &lt;div&gt;80%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+        &lt;p class="progress-bar-three-title"&gt;Increased by 70%:&lt;/p&gt;
+        &lt;div class="progress-bar-three"&gt;
+                 &lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+@mixin progress-bar
+    background-color: $light-blue
+    border-radius: 13px
+    padding: 3px
+    > div
+         height: 20px
+         border-radius: 10px
+         background-color: $dark-blue
+
+.progress-bar-one
+     @include progress-bar
+
+     > div
+         width: 90%
+
+.progress-bar-two
+     @include progress-bar
+
+     > div
+         width: 80%
+         color: $white
+         text-align: center
+
+.progress-bar-three
+     @include progress-bar
+
+     > div
+        width: 70%
+
+.progress-bar-three-title
+    font-size: 16px
+    color: $white
+    text-shadow: -1px -1px 0 $dark-blue, 1px -1px 0 $dark-blue,
+    -1px 1px 0 $dark-blue, 1px 1px 0 $dark-blue
+    padding-left: 10px
+    padding-bottom: 5px
+
+                    </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="effects">
+                <h2 class="pd-20 text-center">Effects</h2>
+                <div class="my-60">
+                    <div class="d-flex pb-20">
+                        <h3 class="grow-1 text-center">Opacity</h3>
+                        <h3 class="grow-1 text-center">Grayscale</h3>
+                        <h3 class="grow-1 text-center">Blur</h3>
+                    </div>
+                    <div class="d-flex space-between">
+                        <img src="https://images.unsplash.com/photo-1437382320143-352a4a540373?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE5fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                             class="opacity w-30p" alt="mountains">
+                        <img src="https://images.unsplash.com/photo-1437382320143-352a4a540373?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE5fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                             class="grayscale w-30p" alt="mountains">
+                        <img src="https://images.unsplash.com/photo-1437382320143-352a4a540373?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE5fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                             class="blur w-30p" alt="mountains">
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;img src="your.jpg" class="opacity" alt="alt"&gt;
+
+&lt;img src="your.jpg" class="grayscale" alt="alt"&gt;
+
+&lt;img src="your.jpg" class="blur" alt="alt"&gt;
+
+                        </pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+.opacity
+    opacity: 0.5
+
+.grayscale
+    filter: grayscale(1)
+
+.blur
+    filter: blur(4px)
+    -webkit-filter: blur(4px)
+
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="centering">
+                <h2 class="pd-20 text-center">Centering</h2>
+                <div class="my-60">
+                    <div class="py-20"><strong>Center text:</strong></div>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                        asperiores commodi, earum eos impedit libero molestiae neque nesciunt numquam odio porro quas
+                        quis unde, voluptatum!</p>
+                    <div class="py-20"><strong>Center image:</strong></div>
+                    <img src="https://images.unsplash.com/photo-1526749837599-b4eba9fd855e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdHVyZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                         class="image-center" alt="nature">
+                </div>
+                <div class="d-flex">
+                    <div class="code-box grow-1 dropdown mr-10">
+                        <div class="text-center p-relative">HTML<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+&lt;p class="text-center"&gt;Your text&lt;/p&gt;
+
+&lt;img src="your.jpg" class="image-center" alt="your text"&gt;
+
+</pre>
+                    </div>
+                    <div class="code-box grow-1 dropdown ml-10">
+                        <div class="text-center p-relative">CSS<span class="icon-arrow"><i
+                                class="fas fa-chevron-down"></i></span></div>
+                        <pre class="dropdown-content">
+
+.text-center
+    text-align: center
+
+.image-center
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+                    </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="paddings">
+                <h2 class="pd-20 text-center">Paddings</h2>
+                <div class="my-60">
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Padding around</h4>
+                            <p>Classes: pd-10, pd-20, pd-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pd-10 bg-light-blue">Padding-around 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pd-20 bg-light-blue">Padding-around 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pd-30 bg-light-blue">Padding-around 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Padding right</h4>
+                            <p>Classes: pr-10, pr-20, pr-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pr-10 bg-light-blue">Padding-right 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pr-20 bg-light-blue">Padding-right 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pr-30 bg-light-blue">Padding-right 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Padding left</h4>
+                            <p>Classes: pl-10, pl-20, pl-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pl-10 bg-light-blue">Padding-left 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pl-20 bg-light-blue">Padding-left 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pl-30 bg-light-blue">Padding-left 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Padding top</h4>
+                            <p>Classes: pt-10, pt-20, pt-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pt-10 bg-light-blue">Padding-top 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pt-20 bg-light-blue">Padding-top 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pt-30 bg-light-blue">Padding-top 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Padding bottom</h4>
+                            <p>Classes: pb-10, pb-20, pb-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pb-10 bg-light-blue">Padding-bottom 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pb-20 bg-light-blue">Padding-bottom 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="pb-30 bg-light-blue">Padding-bottom 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="margins">
+                <h2 class="pd-20 text-center">Margins</h2>
+                <div class="my-60">
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Margin around</h4>
+                            <p>Classes: mg-10, mg-20, mg-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mg-10 bg-light-blue">Margin-around 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mg-20 bg-light-blue">Margin-around 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mg-30 bg-light-blue">Margin-around 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Margin right</h4>
+                            <p>Classes: mr-10, mr-20, mr-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mr-10 bg-light-blue">Margin-right 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mr-20 bg-light-blue">Margin-right 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mr-30 bg-light-blue">Margin-right 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Margin left</h4>
+                            <p>Classes: ml-10, ml-20, ml-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="ml-10 bg-light-blue">Margin-left 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="ml-20 bg-light-blue">Margin-left 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="ml-30 bg-light-blue">Margin-left 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Margin top</h4>
+                            <p>Classes: mt-10, mt-20, mt-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mt-10 bg-light-blue">Margin-top 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mt-20 bg-light-blue">Margin-top 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mt-30 bg-light-blue">Margin-top 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex space-between py-30">
+                        <div>
+                            <h4 class="pb-5">Margin bottom</h4>
+                            <p>Classes: mb-10, mb-20, mb-30</p>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mb-10 bg-light-blue">Margin-bottom 10px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mb-20 bg-light-blue">Margin-bottom 20px</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border">
+                                <div class="mb-30 bg-light-blue">Margin-bottom 30px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
