@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://Jurgitaesu.github.io/SASS-project",
   "scripts": {
     "compile": "node-sass public/sass/main.sass public/css/main.css -w",
     "deploy": "npm run build && gh-pages -d dist -b master"
