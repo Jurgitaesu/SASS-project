@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass public/sass/main.sass public/css/main.css -w"
+    "compile": "node-sass public/sass/main.sass public/css/main.css -w",
+    "deploy": "npm run build && gh-pages -d dist -b master"
   },
-  "author": "",
+  "author": "Jurgita Adomaviciene",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^5.0.0"
